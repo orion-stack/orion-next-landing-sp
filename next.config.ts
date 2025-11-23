@@ -20,6 +20,14 @@ const nextConfig: NextConfig = {
   sassOptions: {
     includePaths: ["./src/styles"],
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
+    ],
+  },
 };
 
 // Wrap the Next.js configuration with the next-intl plugin to enable i18n routing and features.
