@@ -1,12 +1,14 @@
 "use client";
 
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/layout/container";
 import { AnimatedRocket } from "@/components/custom/animated-rocket";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 export function Hero() {
+  const t = useTranslations("Hero");
   return (
     <section className="relative overflow-hidden py-20 md:py-32">
       <Container className="relative z-10 flex flex-col items-center text-center">
@@ -16,12 +18,11 @@ export function Hero() {
           transition={{ duration: 0.5 }}
         >
           <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-            Build faster with <span className="text-primary">Orion</span>
+            {t("title")}{" "}
+            <span className="text-primary">{t("titleHighlight")}</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground sm:text-xl mx-auto">
-            The ultimate Next.js starter kit for building high-performance,
-            scalable web applications. Everything you need, nothing you
-            don&apos;t.
+            {t("description")}
           </p>
         </motion.div>
 
@@ -32,11 +33,11 @@ export function Hero() {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <Button size="lg" asChild>
-            <Link href="#features">Get Started</Link>
+            <Link href="#features">{t("getStarted")}</Link>
           </Button>
           <Button size="lg" variant="outline" asChild>
             <Link href="https://github.com/orion-stack" target="_blank">
-              View on GitHub
+              {t("viewGitHub")}
             </Link>
           </Button>
         </motion.div>

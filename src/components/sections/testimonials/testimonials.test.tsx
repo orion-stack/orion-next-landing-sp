@@ -5,11 +5,13 @@ import { Testimonials } from "./testimonials";
 describe("Testimonials", () => {
   it("renders section title", () => {
     render(<Testimonials />);
-    expect(screen.getByText("Loved by developers")).toBeInTheDocument();
+    expect(screen.getByText("Testimonials.title")).toBeInTheDocument();
   });
 
   it("renders testimonial content", () => {
     render(<Testimonials />);
-    expect(screen.getByText(/Orion saved us weeks/)).toBeInTheDocument();
+    expect(
+      screen.getByText(/Testimonials.testimonial1.content/),
+    ).toBeInTheDocument();
   });
 });

@@ -5,12 +5,12 @@ import { Hero } from "./hero";
 describe("Hero", () => {
   it("renders headline correctly", () => {
     render(<Hero />);
-    expect(screen.getByText(/Build faster with/)).toBeInTheDocument();
+    expect(screen.getByText(/Hero.title/)).toBeInTheDocument();
   });
 
   it("renders CTA buttons", () => {
     render(<Hero />);
-    expect(screen.getByText("Get Started")).toBeInTheDocument();
-    expect(screen.getByText("View on GitHub")).toBeInTheDocument();
+    expect(screen.getByText("Hero.getStarted")).toBeInTheDocument();
+    expect(screen.getByText("Hero.viewGitHub")).toBeInTheDocument();
   });
 });

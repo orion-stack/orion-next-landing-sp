@@ -5,13 +5,11 @@ import { CTA } from "./cta";
 describe("CTA", () => {
   it("renders headline correctly", () => {
     render(<CTA />);
-    expect(
-      screen.getByText(/Ready to start your next project/),
-    ).toBeInTheDocument();
+    expect(screen.getByText(/CTA.title/)).toBeInTheDocument();
   });
 
   it("renders action buttons", () => {
     render(<CTA />);
-    expect(screen.getByText("Get started today")).toBeInTheDocument();
+    expect(screen.getByText("CTA.getStarted")).toBeInTheDocument();
   });
 });

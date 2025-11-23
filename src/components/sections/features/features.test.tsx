@@ -5,12 +5,16 @@ import { Features } from "./features";
 describe("Features", () => {
   it("renders section title", () => {
     render(<Features />);
-    expect(screen.getByText("Everything you need to ship")).toBeInTheDocument();
+    expect(screen.getByText("Features.title")).toBeInTheDocument();
   });
 
   it("renders feature items", () => {
     render(<Features />);
-    expect(screen.getByText("Lightning Fast")).toBeInTheDocument();
-    expect(screen.getByText("Secure by Default")).toBeInTheDocument();
+    expect(
+      screen.getByText("Features.lightningFast.title"),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText("Features.secureByDefault.title"),
+    ).toBeInTheDocument();
   });
 });

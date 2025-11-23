@@ -49,9 +49,7 @@ test("Home Page", async () => {
   ).toBeInTheDocument();
 
   // Test for some key content
-  expect(screen.getByText("Everything you need to ship")).toBeInTheDocument();
-  expect(screen.getByText("Loved by developers")).toBeInTheDocument();
-  expect(
-    screen.getByText(/Ready to start your next project/),
-  ).toBeInTheDocument();
+  expect(screen.getByText("Features.title")).toBeInTheDocument();
+  expect(screen.getByText("Testimonials.title")).toBeInTheDocument();
+  expect(screen.getByText(/CTA.title/)).toBeInTheDocument();
 });

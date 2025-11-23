@@ -1,9 +1,92 @@
 {
-  "HomePage": {
-    "title": "Welcome to Orion Next.js Starter",
-    "description": "Your production-ready starter template with all essential features pre-configured. Get started quickly with the latest Next.js 16, TypeScript, Tailwind CSS, and more.",
-    "deployButton": "Deploy Now",
-    "documentationButton": "Documentation"
+  "Header": {
+    "features": "Features",
+    "testimonials": "Testimonials",
+    "faq": "FAQ",
+    "getStarted": "Get Started"
+  },
+  "Hero": {
+    "title": "Build faster with",
+    "titleHighlight": "Orion",
+    "description": "The ultimate Next.js starter kit for building high-performance, scalable web applications. Everything you need, nothing you don't.",
+    "getStarted": "Get Started",
+    "viewGitHub": "View on GitHub"
+  },
+  "Features": {
+    "title": "Everything you need to ship",
+    "description": "Orion provides a solid foundation so you can focus on building your unique features.",
+    "lightningFast": {
+      "title": "Lightning Fast",
+      "description": "Built on Next.js 14 with server components for optimal performance and SEO."
+    },
+    "secureByDefault": {
+      "title": "Secure by Default",
+      "description": "Implements best practices for security, including headers and authentication patterns."
+    },
+    "responsiveDesign": {
+      "title": "Responsive Design",
+      "description": "Mobile-first approach ensuring your site looks great on all devices."
+    },
+    "globalScale": {
+      "title": "Global Scale",
+      "description": "Ready for internationalization and edge deployment out of the box."
+    },
+    "developerExperience": {
+      "title": "Developer Experience",
+      "description": "Typed with TypeScript, linted with ESLint, and formatted with Prettier."
+    },
+    "modularArchitecture": {
+      "title": "Modular Architecture",
+      "description": "Clean separation of concerns making it easy to maintain and extend."
+    }
+  },
+  "Testimonials": {
+    "title": "Loved by developers",
+    "description": "See what developers are saying about Orion Stack.",
+    "testimonial1": {
+      "content": "Orion saved us weeks of setup time. The architecture is solid and the developer experience is fantastic.",
+      "author": "Sarah Chen",
+      "role": "Lead Developer at TechCorp"
+    },
+    "testimonial2": {
+      "content": "Best Next.js starter I've used. Everything just works out of the box, and the code quality is top-notch.",
+      "author": "Michael Rodriguez",
+      "role": "Freelance Developer"
+    },
+    "testimonial3": {
+      "content": "The attention to detail in this starter is impressive. From testing to deployment, everything is covered.",
+      "author": "Emily Watson",
+      "role": "CTO at StartupXYZ"
+    }
+  },
+  "CTA": {
+    "title": "Ready to start your next project?",
+    "subtitle": "Get started today.",
+    "description": "Stop wasting time on configuration and boilerplate. Focus on building what makes your product unique.",
+    "getStarted": "Get started today",
+    "learnMore": "Learn more"
+  },
+  "FAQ": {
+    "title": "Frequently asked questions",
+    "question1": {
+      "question": "What is Orion Stack?",
+      "answer": "Orion Stack is a collection of production-ready Next.js starter templates with all essential features pre-configured."
+    },
+    "question2": {
+      "question": "Is it free to use?",
+      "answer": "Yes! Orion Stack is completely free and open source. You can use it for personal or commercial projects."
+    },
+    "question3": {
+      "question": "What technologies are included?",
+      "answer": "Next.js 16, TypeScript, Tailwind CSS, Shadcn UI, Framer Motion, next-intl, and many more developer tools."
+    },
+    "question4": {
+      "question": "How do I get started?",
+      "answer": "Clone the repository, install dependencies with yarn, and run 'yarn dev' to start the development server."
+    }
+  },
+  "Footer": {
+    "copyright": "Orion Stack. All rights reserved."
   },
   "LanguageSwitcher": {
     "label": "Language"

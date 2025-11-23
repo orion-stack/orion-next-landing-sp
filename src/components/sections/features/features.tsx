@@ -1,47 +1,9 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { Container } from "@/components/layout/container";
 import { Zap, Shield, Smartphone, Globe, Code, Layers } from "lucide-react";
 import { motion } from "motion/react";
-
-const features = [
-  {
-    name: "Lightning Fast",
-    description:
-      "Built on Next.js 14 with server components for optimal performance and SEO.",
-    icon: Zap,
-  },
-  {
-    name: "Secure by Default",
-    description:
-      "Implements best practices for security, including headers and authentication patterns.",
-    icon: Shield,
-  },
-  {
-    name: "Responsive Design",
-    description:
-      "Mobile-first approach ensuring your site looks great on all devices.",
-    icon: Smartphone,
-  },
-  {
-    name: "Global Scale",
-    description:
-      "Ready for internationalization and edge deployment out of the box.",
-    icon: Globe,
-  },
-  {
-    name: "Developer Experience",
-    description:
-      "Typed with TypeScript, linted with ESLint, and formatted with Prettier.",
-    icon: Code,
-  },
-  {
-    name: "Modular Architecture",
-    description:
-      "Clean separation of concerns making it easy to maintain and extend.",
-    icon: Layers,
-  },
-];
 
 const container = {
   hidden: { opacity: 0 },
@@ -59,16 +21,50 @@ const item = {
 };
 
 export function Features() {
+  const t = useTranslations("Features");
+
+  const features = [
+    {
+      name: t("lightningFast.title"),
+      description: t("lightningFast.description"),
+      icon: Zap,
+    },
+    {
+      name: t("secureByDefault.title"),
+      description: t("secureByDefault.description"),
+      icon: Shield,
+    },
+    {
+      name: t("responsiveDesign.title"),
+      description: t("responsiveDesign.description"),
+      icon: Smartphone,
+    },
+    {
+      name: t("globalScale.title"),
+      description: t("globalScale.description"),
+      icon: Globe,
+    },
+    {
+      name: t("developerExperience.title"),
+      description: t("developerExperience.description"),
+      icon: Code,
+    },
+    {
+      name: t("modularArchitecture.title"),
+      description: t("modularArchitecture.description"),
+      icon: Layers,
+    },
+  ];
+
   return (
     <section id="features" className="py-20 bg-muted/30">
       <Container>
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Everything you need to ship
+            {t("title")}
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Orion provides a solid foundation so you can focus on building your
-            unique features.
+            {t("description")}
           </p>
         </div>
         <motion.div

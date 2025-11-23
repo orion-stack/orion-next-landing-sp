@@ -1,11 +1,14 @@
 "use client";
 
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/layout/container";
 import { motion } from "motion/react";
 
 export function CTA() {
+  const t = useTranslations("CTA");
+
   return (
     <section className="py-20">
       <Container>
@@ -18,17 +21,16 @@ export function CTA() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl font-bold tracking-tight text-primary-foreground sm:text-4xl">
-              Ready to start your next project?
+              {t("title")}
               <br />
-              Get started today.
+              {t("subtitle")}
             </h2>
             <p className="mt-6 text-lg leading-8 text-primary-foreground/90">
-              Stop wasting time on configuration and boilerplate. Focus on
-              building what makes your product unique.
+              {t("description")}
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
               <Button size="lg" variant="secondary" asChild>
-                <Link href="#">Get started today</Link>
+                <Link href="#">{t("getStarted")}</Link>
               </Button>
               <Button
                 size="lg"
@@ -37,7 +39,7 @@ export function CTA() {
                 asChild
               >
                 <Link href="#">
-                  Learn more <span aria-hidden="true">→</span>
+                  {t("learnMore")} <span aria-hidden="true">→</span>
                 </Link>
               </Button>
             </div>
