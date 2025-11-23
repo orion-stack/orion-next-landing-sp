@@ -5,7 +5,6 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { Container } from "@/components/layout/container";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 
 const navigation = [
   { name: "Features", href: "#features" },

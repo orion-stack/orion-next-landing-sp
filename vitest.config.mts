@@ -21,7 +21,7 @@ export default defineConfig({
     // Sets the test environment to JSDOM, simulating a browser environment.
     environment: "jsdom",
     // Specifies setup files to run before each test suite.
-    setupFiles: ["./vitest.setup.ts", "./msw/msw.setup.ts"],
+    setupFiles: ["./vitest.setup.tsx", "./msw/msw.setup.ts"],
     // Defines patterns for test files to include.
     include: [
       "src/app/**/*.test.{ts,tsx}",

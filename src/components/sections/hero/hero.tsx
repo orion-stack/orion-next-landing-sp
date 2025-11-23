@@ -1,20 +1,36 @@
+"use client";
+
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/layout/container";
+import { AnimatedRocket } from "@/components/custom/animated-rocket";
+import { motion } from "framer-motion";
 
 export function Hero() {
   return (
     <section className="relative overflow-hidden py-20 md:py-32">
       <Container className="relative z-10 flex flex-col items-center text-center">
-        <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-          Build faster with <span className="text-primary">Orion</span>
-        </h1>
-        <p className="mt-6 max-w-2xl text-lg text-muted-foreground sm:text-xl">
-          The ultimate Next.js starter kit for building high-performance,
-          scalable web applications. Everything you need, nothing you
-          don&apos;t.
-        </p>
-        <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
+            Build faster with <span className="text-primary">Orion</span>
+          </h1>
+          <p className="mt-6 max-w-2xl text-lg text-muted-foreground sm:text-xl mx-auto">
+            The ultimate Next.js starter kit for building high-performance,
+            scalable web applications. Everything you need, nothing you
+            don&apos;t.
+          </p>
+        </motion.div>
+
+        <motion.div
+          className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
           <Button size="lg" asChild>
             <Link href="#features">Get Started</Link>
           </Button>
@@ -23,6 +39,10 @@ export function Hero() {
               View on GitHub
             </Link>
           </Button>
+        </motion.div>
+
+        <div className="mt-12">
+          <AnimatedRocket />
         </div>
       </Container>
 

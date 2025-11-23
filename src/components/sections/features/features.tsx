@@ -1,5 +1,8 @@
+"use client";
+
 import { Container } from "@/components/layout/container";
 import { Zap, Shield, Smartphone, Globe, Code, Layers } from "lucide-react";
+import { motion } from "motion/react";
 
 const features = [
   {
@@ -40,6 +43,21 @@ const features = [
   },
 ];
 
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0 },
+};
+
 export function Features() {
   return (
     <section id="features" className="py-20 bg-muted/30">
@@ -53,9 +71,19 @@ export function Features() {
             unique features.
           </p>
         </div>
-        <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:max-w-none lg:grid-cols-3">
+        <motion.div
+          className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:max-w-none lg:grid-cols-3"
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+        >
           {features.map((feature) => (
-            <div key={feature.name} className="flex flex-col items-start">
+            <motion.div
+              key={feature.name}
+              className="flex flex-col items-start"
+              variants={item}
+            >
               <div className="rounded-lg bg-primary/10 p-3 text-primary ring-1 ring-primary/20">
                 <feature.icon className="h-6 w-6" aria-hidden="true" />
               </div>
@@ -65,9 +93,9 @@ export function Features() {
               <p className="mt-2 text-base leading-7 text-muted-foreground">
                 {feature.description}
               </p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </Container>
     </section>
   );

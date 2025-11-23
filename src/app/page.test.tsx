@@ -40,15 +40,18 @@ test("Home Page", async () => {
 
   // Test for the main heading
   expect(
-    screen.getByText("Welcome to Orion Next.js Starter"),
+    screen.getByText((content, element) => {
+      return (
+        element?.tagName.toLowerCase() === "h1" &&
+        content.includes("Build faster with")
+      );
+    }),
   ).toBeInTheDocument();
 
   // Test for some key content
+  expect(screen.getByText("Everything you need to ship")).toBeInTheDocument();
+  expect(screen.getByText("Loved by developers")).toBeInTheDocument();
   expect(
-    screen.getByText(
-      "Your production-ready starter template with all essential features pre-configured. Get started quickly with the latest Next.js 16, TypeScript, Tailwind CSS, and more.",
-    ),
+    screen.getByText(/Ready to start your next project/),
   ).toBeInTheDocument();
-  expect(screen.getByText("Deploy Now")).toBeInTheDocument();
-  expect(screen.getByText("Documentation")).toBeInTheDocument();
 });
