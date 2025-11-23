@@ -15,21 +15,39 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Orion Next.js Starter",
+  title: {
+    default: "Orion Stack - Next.js Starter Templates",
+    template: "%s | Orion Stack",
+  },
   description:
-    "Enterprise-grade Next.js 16 starter template with modern development tooling and best practices pre-configured",
+    "Production-ready Next.js starter templates with TypeScript, Tailwind CSS, Shadcn UI, and comprehensive developer tooling. Build faster with Orion.",
+  keywords: [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "Starter Template",
+    "Boilerplate",
+    "Shadcn UI",
+    "Framer Motion",
+    "next-intl",
+  ],
+  authors: [{ name: "Orion Stack" }],
+  creator: "Orion Stack",
   openGraph: {
-    title: "Orion Next.js Starter",
+    title: "Orion Stack - Next.js Starter Templates",
     description:
-      "Production-ready Next.js starter with TypeScript, Tailwind CSS, and comprehensive tooling",
+      "Production-ready Next.js starter templates with TypeScript, Tailwind CSS, and comprehensive tooling. Everything you need, nothing you don't.",
     type: "website",
     locale: "en_US",
+    alternateLocale: ["fr_FR"],
+    siteName: "Orion Stack",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Orion Next.js Starter",
+    title: "Orion Stack - Next.js Starter Templates",
     description:
-      "Enterprise-grade Next.js starter template with modern development tooling",
+      "Build faster with production-ready Next.js templates. TypeScript, Tailwind CSS, and modern tooling included.",
   },
   robots: {
     index: true,
@@ -41,6 +59,9 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
+  },
+  verification: {
+    google: "your-google-verification-code",
   },
 };
 
