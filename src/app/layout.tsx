@@ -64,7 +64,7 @@ export default async function RootLayout({
   const timeZone = await getTimeZone();
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className="scroll-smooth" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
