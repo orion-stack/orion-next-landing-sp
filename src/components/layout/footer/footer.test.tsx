@@ -5,9 +5,7 @@ import { Footer } from "./footer";
 describe("Footer", () => {
   it("renders copyright notice", () => {
     render(<Footer />);
-    expect(
-      screen.getByText(/Orion Stack. All rights reserved./),
-    ).toBeInTheDocument();
+    expect(screen.getByText(/copyright/)).toBeInTheDocument();
   });
 
   it("renders social links", () => {

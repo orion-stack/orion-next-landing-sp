@@ -10,8 +10,8 @@ describe("Header", () => {
 
   it("renders navigation links", () => {
     render(<Header />);
-    expect(screen.getByText("Features")).toBeInTheDocument();
-    expect(screen.getByText("Testimonials")).toBeInTheDocument();
-    expect(screen.getByText("FAQ")).toBeInTheDocument();
+    expect(screen.getByText("features")).toBeInTheDocument();
+    expect(screen.getByText("testimonials")).toBeInTheDocument();
+    expect(screen.getByText("faq")).toBeInTheDocument();
   });
 });

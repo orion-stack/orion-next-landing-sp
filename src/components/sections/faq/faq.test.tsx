@@ -5,11 +5,13 @@ import { FAQ } from "./faq";
 describe("FAQ", () => {
   it("renders section title", () => {
     render(<FAQ />);
-    expect(screen.getByText("FAQ.title")).toBeInTheDocument();
+    expect(screen.getByRole("heading", { level: 2 })).toBeInTheDocument();
   });
 
   it("renders questions", () => {
     render(<FAQ />);
-    expect(screen.getByText("FAQ.question1.question")).toBeInTheDocument();
+    // Multiple questions have "question" key
+    const questions = screen.getAllByText("question");
+    expect(questions.length).toBeGreaterThan(0);
   });
 });

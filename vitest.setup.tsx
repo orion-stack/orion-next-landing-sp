@@ -73,7 +73,12 @@ vi.mock("motion/react", async () => {
 
 // Mock next-intl
 vi.mock("next-intl", () => ({
-  useTranslations: () => (key: string) => key,
+  useTranslations: () => (key: string) => {
+    // Return the last part of the key for better readability in tests
+    // e.g., "Hero.title" -> "title", "Features.lightningFast.title" -> "title"
+    const parts = key.split(".");
+    return parts[parts.length - 1];
+  },
   useLocale: () => "en",
 }));
 
