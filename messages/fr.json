@@ -1,14 +1,97 @@
 {
-  "HomePage": {
-    "title": "Bienvenue dans le starter Orion Next.js",
-    "description": "Votre template starter prêt pour la production avec toutes les fonctionnalités essentielles pré-configurées. Commencez rapidement avec les dernières versions de Next.js 16, TypeScript, Tailwind CSS, et plus encore.",
-    "deployButton": "Déployer maintenant",
-    "documentationButton": "Documentation"
+  "Header": {
+    "features": "Fonctionnalités",
+    "testimonials": "Témoignages",
+    "faq": "FAQ",
+    "getStarted": "Commencer"
+  },
+  "Hero": {
+    "title": "Construisez plus rapidement avec",
+    "titleHighlight": "Orion",
+    "description": "Le kit de démarrage Next.js ultime pour créer des applications web performantes et évolutives. Tout ce dont vous avez besoin, rien de superflu.",
+    "getStarted": "Commencer",
+    "viewGitHub": "Voir sur GitHub"
+  },
+  "Features": {
+    "title": "Tout ce dont vous avez besoin pour livrer",
+    "description": "Orion fournit une base solide pour que vous puissiez vous concentrer sur la création de vos fonctionnalités uniques.",
+    "lightningFast": {
+      "title": "Ultra Rapide",
+      "description": "Construit sur Next.js 14 avec des composants serveur pour des performances et un SEO optimaux."
+    },
+    "secureByDefault": {
+      "title": "Sécurisé par Défaut",
+      "description": "Implémente les meilleures pratiques de sécurité, y compris les en-têtes et les modèles d'authentification."
+    },
+    "responsiveDesign": {
+      "title": "Design Responsive",
+      "description": "Approche mobile-first garantissant que votre site est superbe sur tous les appareils."
+    },
+    "globalScale": {
+      "title": "Échelle Mondiale",
+      "description": "Prêt pour l'internationalisation et le déploiement en périphérie dès le départ."
+    },
+    "developerExperience": {
+      "title": "Expérience Développeur",
+      "description": "Typé avec TypeScript, linté avec ESLint et formaté avec Prettier."
+    },
+    "modularArchitecture": {
+      "title": "Architecture Modulaire",
+      "description": "Séparation claire des préoccupations facilitant la maintenance et l'extension."
+    }
+  },
+  "Testimonials": {
+    "title": "Adoré par les développeurs",
+    "description": "Découvrez ce que les développeurs disent d'Orion Stack.",
+    "testimonial1": {
+      "content": "Orion nous a fait gagner des semaines de configuration. L'architecture est solide et l'expérience développeur est fantastique.",
+      "author": "Sarah Chen",
+      "role": "Développeuse Principale chez TechCorp"
+    },
+    "testimonial2": {
+      "content": "Meilleur starter Next.js que j'ai utilisé. Tout fonctionne dès le départ et la qualité du code est excellente.",
+      "author": "Michael Rodriguez",
+      "role": "Développeur Freelance"
+    },
+    "testimonial3": {
+      "content": "L'attention aux détails dans ce starter est impressionnante. Des tests au déploiement, tout est couvert.",
+      "author": "Emily Watson",
+      "role": "CTO chez StartupXYZ"
+    }
+  },
+  "CTA": {
+    "title": "Prêt à démarrer votre prochain projet ?",
+    "subtitle": "Commencez dès aujourd'hui.",
+    "description": "Arrêtez de perdre du temps sur la configuration et le code passe-partout. Concentrez-vous sur la création de ce qui rend votre produit unique.",
+    "getStarted": "Commencer aujourd'hui",
+    "learnMore": "En savoir plus"
+  },
+  "FAQ": {
+    "title": "Questions fréquemment posées",
+    "question1": {
+      "question": "Qu'est-ce qu'Orion Stack ?",
+      "answer": "Orion Stack est une collection de modèles de démarrage Next.js prêts pour la production avec toutes les fonctionnalités essentielles pré-configurées."
+    },
+    "question2": {
+      "question": "Est-ce gratuit ?",
+      "answer": "Oui ! Orion Stack est complètement gratuit et open source. Vous pouvez l'utiliser pour des projets personnels ou commerciaux."
+    },
+    "question3": {
+      "question": "Quelles technologies sont incluses ?",
+      "answer": "Next.js 16, TypeScript, Tailwind CSS, Shadcn UI, Framer Motion, next-intl et bien d'autres outils pour développeurs."
+    },
+    "question4": {
+      "question": "Comment démarrer ?",
+      "answer": "Clonez le dépôt, installez les dépendances avec yarn et exécutez 'yarn dev' pour démarrer le serveur de développement."
+    }
+  },
+  "Footer": {
+    "copyright": "Orion Stack. Tous droits réservés."
   },
   "LanguageSwitcher": {
     "label": "Langue"
   },
   "ThemeToggle": {
-    "label": "Changer de thème"
+    "label": "Changer le thème"
   }
 }

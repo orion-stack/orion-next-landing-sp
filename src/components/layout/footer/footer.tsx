@@ -1,23 +1,10 @@
+"use client";
+
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { Container } from "@/components/layout/container";
 
 const footerNavigation = {
-  product: [
-    { name: "Features", href: "#" },
-    { name: "Integrations", href: "#" },
-    { name: "Pricing", href: "#" },
-    { name: "Changelog", href: "#" },
-  ],
-  company: [
-    { name: "About", href: "#" },
-    { name: "Blog", href: "#" },
-    { name: "Careers", href: "#" },
-    { name: "Contact", href: "#" },
-  ],
-  legal: [
-    { name: "Privacy", href: "#" },
-    { name: "Terms", href: "#" },
-  ],
   social: [
     {
       name: "GitHub",
@@ -45,6 +32,8 @@ const footerNavigation = {
 };
 
 export function Footer() {
+  const t = useTranslations("Footer");
+
   return (
     <footer className="bg-muted/50 border-t">
       <Container>
@@ -63,8 +52,7 @@ export function Footer() {
           </div>
           <div className="mt-8 md:order-1 md:mt-0">
             <p className="text-center text-xs leading-5 text-muted-foreground">
-              &copy; {new Date().getFullYear()} Orion Stack. All rights
-              reserved.
+              &copy; {new Date().getFullYear()} {t("copyright")}
             </p>
           </div>
         </div>

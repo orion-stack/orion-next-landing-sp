@@ -3,18 +3,21 @@
 import * as React from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { Container } from "@/components/layout/container";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-
-const navigation = [
-  { name: "Features", href: "#features" },
-  { name: "Testimonials", href: "#testimonials" },
-  { name: "FAQ", href: "#faq" },
-];
+import { ThemeToggle } from "@/components/custom/theme-toggle";
+import { LanguageSwitcher } from "@/components/custom/language-switcher";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
+  const t = useTranslations("Header");
+
+  const navigation = [
+    { name: t("features"), href: "#features" },
+    { name: t("testimonials"), href: "#testimonials" },
+    { name: t("faq"), href: "#faq" },
+  ];
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -37,7 +40,11 @@ export function Header() {
                 {item.name}
               </Link>
             ))}
-            <Button size="sm">Get Started</Button>
+            <div className="flex items-center gap-2">
+              <LanguageSwitcher />
+              <ThemeToggle />
+              <Button size="sm">{t("getStarted")}</Button>
+            </div>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -74,7 +81,7 @@ export function Header() {
                 </Link>
               ))}
               <div className="pt-4 px-3">
-                <Button className="w-full">Get Started</Button>
+                <Button className="w-full">{t("getStarted")}</Button>
               </div>
             </div>
           </Container>
